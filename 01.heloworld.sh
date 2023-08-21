@@ -1,7 +1,6 @@
 #!/bin/bash
 
 echo "Hello World, I am leraning DevOps with AWS"
-
 PERSON1=Ramesh 
 PERSON2=Shiva 
 
