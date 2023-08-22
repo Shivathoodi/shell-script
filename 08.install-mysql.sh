@@ -9,10 +9,12 @@ USERID=$(id -u)
      
 yum install mysql -y
 
-if [ $? -ne 0 ]  then 
+if [ $? -ne 0 ] 
+then 
       echo "installation of mysql is error"
       exit 1
-  else 
+else
+   
       echo "installation of mysql is success"
  fi   
 
