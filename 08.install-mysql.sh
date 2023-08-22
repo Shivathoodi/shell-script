@@ -6,6 +6,6 @@ USERID=$(id -u)
  then 
      echo "ERROR:: Please run this script with root access"
  fi
-     exit 1  
+     exit 20
 
  yum install mysql
