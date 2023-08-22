@@ -7,13 +7,23 @@ USERID=$(id -u)
      echo "ERROR:: Please run this script with root access"
  fi
      
+yum install mysql -y
 
- yum install mysql  
-  
-  if [ $? -ne 0 ]
-  then 
+if [ $? -ne 0 ]  then 
       echo "installation of mysql is error"
       exit 1
   else 
       echo "installation of mysql is success"
- fi 
+ fi   
+
+ yum install postfix -y
+
+if [ $? -ne 0 ]  then 
+      echo "installation of postfix is error"
+      exit 1
+  else 
+      echo "installation of postfix is success"
+ fi  
+  
+
+ 
