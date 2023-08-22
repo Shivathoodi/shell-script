@@ -20,10 +20,11 @@ else
 
  yum install postfix -y
 
-if [ $? -ne 0 ]  then 
+if [ $? -ne 0 ] 
+then 
       echo "installation of postfix is error"
       exit 1
-  else 
+else 
       echo "installation of postfix is success"
  fi  
   
