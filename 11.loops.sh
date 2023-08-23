@@ -16,7 +16,7 @@ if [ $USERID -ne 0 ];
 then
     echo -e "$R ERROR:: Please run this script with root access $N"
     exit 1
-
+fi
 VALIDATE(){
     if [ $1 -ne 0 ];
     then
@@ -38,6 +38,5 @@ do
     else 
         echo -e "$Y $i is already installed $N"
     fi    
-    
-    
+
 done      
