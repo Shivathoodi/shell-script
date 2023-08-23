@@ -3,10 +3,8 @@
 
 DATE=$(date +%F)
 LOGSDIR=/home/centos/shell-script-logs
-
 SCRIPT_NAME=$0
 LOGFILE=$LOGSDIR/$0-$DATE.log
-
 USERID=$(id -u)
 R="\e[31m"
 N="\e[0m"
@@ -29,18 +27,16 @@ VALIDATE(){
     fi  
 } 
     
-
-
-    for i in $@
-    do 
-        yum installed $i &>>$LOGFILE
-        if [ $? -ne 0 ]
-        then 
-            echo "$i is not installed, let's install it"
-            yum install $i -y &>>$LOGFILE
-            VALIDATE $? "$i"
-        else 
+for i in $@
+do 
+    yum installed $i &>>$LOGFILE
+    if [ $? -ne 0 ]
+    then 
+        echo "$i is not installed, let's install it"
+        yum install $i -y &>>$LOGFILE
+        VALIDATE $? "$i"
+    else 
         echo -e "$Y $i is already installed $N"
-        fi    
+    fi    
     
-    done      
+done      
