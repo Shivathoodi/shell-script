@@ -19,15 +19,15 @@ then
     echo -e "$R ERROR:: Please run this script with root access $N"
     exit 1
 
- VALIDATE []{
-     if [ $1 -ne 0 ];
+VALIDATE []{
+    if [ $1 -ne 0 ];
     then
         echo -e "Installing $2 ...$R FALIURE $N"
         exit 1
     else 
         echo -e "Installing $2 ...$G SUCCESS $N" 
     fi  
-  } 
+} 
     
 
 
