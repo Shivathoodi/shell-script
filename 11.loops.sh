@@ -27,7 +27,8 @@ then
     else 
         echo -e "Installing $2 ...$G SUCCESS $N" 
     fi
-    }    
+
+}    
     
     for i in $@
     do 
