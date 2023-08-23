@@ -42,4 +42,5 @@ VALIDATE(){
         else 
         echo -e "$Y $i is already installed $N"
         fi    
+    
     done      
