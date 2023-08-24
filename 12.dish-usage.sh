@@ -26,3 +26,5 @@ if [ $usage -gt $DISK_USAGE_THRESHOLD ];
 done <<< $DISK_USAGE
 
 echo -e "message: $message"
+
+sh mail.sh shivathoodi@gmail.com "High Disk Usage" "$message" "DEVOPS TEAM" "High Disk usage"
