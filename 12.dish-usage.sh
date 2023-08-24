@@ -1,13 +1,19 @@
 #!/bin/bash
 
-APP_LOGS_DIR=/home/centos/app-logs
-
+LOGFILE_DIRECTORY=/tmp
 DATE=$(date +%F:%H:%M:%S)
-LOGSDIR=/home/centos/shellscript-logs
-
 SCRIPT_NAME=$0
-LOGFILE=$LOGSDIR/$0-$DATE.log
+LOGFILE=$LOGFILE_DIRECTORY/$SCRIPT_NAME-$DATE.log
 
-FILES_TO_DELETE=$(find $APP_LOGS_DIR -name "*.log" -type f -mtime +14)
+R="\e[31m"
+N="\e[0m"
+Y="\e[33m"
+G="\e[32m"
+ 
+DISK_USAGE=$(df -hT | grep -vE 'tmpfs|Filesystem')
+DISK_USAGE_THRESHOLD=1 
 
-echo "$FILES_TO_DELETE"s
+while IFS= read line 
+do
+    echo "output: $line"
+done >>> $DISK_USAGE      
